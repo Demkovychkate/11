@@ -4,6 +4,8 @@ let res1 = document.querySelector('.resOne');
 let btn2= document.querySelector('.btnTwo');
 let res2 = document.querySelector('.resTwo');
 
+let btn3= document.querySelector('.btnThree');
+let res3 = document.querySelector('.resThree');
 
 //Task1
 function FirstTask(){
@@ -26,5 +28,21 @@ function SecondTask(){
   }
   
   btn2.onclick=SecondTask;
+
+  //Task 3 
+    function ThirdTask(){
+    let N = 428;
+    let str3 = ' ';
+
+    for (let i = 1; i <= 100; i++) {
+      let j = Math.pow( [i],2); 
+      if ( j <= N ){
+        str3 += j + ' ';
+        res3.innerHTML= str3;
+      }
+      
+    }
+  }
   
+  btn3.onclick=ThirdTask;
   
