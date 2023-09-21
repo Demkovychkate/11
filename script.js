@@ -6,6 +6,12 @@ let res2 = document.querySelector('.resTwo');
 
 let btn3= document.querySelector('.btnThree');
 let res3 = document.querySelector('.resThree');
+let res31 = document.querySelector('.resthreeOne');
+
+let btn4= document.querySelector('.btnfour');
+let res41 = document.querySelector('.resfourOne');
+let res42 = document.querySelector('.resfourTwo');
+
 
 //Task1
 function FirstTask(){
@@ -29,20 +35,44 @@ function SecondTask(){
   
   btn2.onclick=SecondTask;
 
-  //Task 3 
-    function ThirdTask(){
-    let N = 428;
+  
+//Task 3 
+function ThirdTask(){
+    let N = prompt('Введіть число');
     let str3 = ' ';
-
+    
     for (let i = 1; i <= 100; i++) {
       let j = Math.pow( [i],2); 
       if ( j <= N ){
         str3 += j + ' ';
         res3.innerHTML= str3;
+        res31.innerHTML=N;
       }
       
     }
   }
   
   btn3.onclick=ThirdTask;
+  
+
+  //Task 4
+  function FourTask(){
+    let n = prompt('Введіть число');  
+    let str4 = ' ';  
+    
+      if(n % n==0 ){
+       if( n % 2 ===0){
+       str4 += 'Дане число є простим '     
+       }
+       else {
+        str4 += 'Дане число не є простим '    
+      }
+       }
+       res41.innerHTML = n;
+       res42.innerHTML= str4 ;
+      }   
+    
+    btn4.onclick=FourTask;
+  
+  
   
