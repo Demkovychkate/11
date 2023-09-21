@@ -12,6 +12,9 @@ let btn4= document.querySelector('.btnfour');
 let res41 = document.querySelector('.resfourOne');
 let res42 = document.querySelector('.resfourTwo');
 
+let btn5= document.querySelector('.btnfive');
+let res51 = document.querySelector('.resfiveOne');
+let res52 = document.querySelector('.resfiveTwo');
 
 //Task1
 function FirstTask(){
@@ -34,7 +37,6 @@ function SecondTask(){
   }
   
   btn2.onclick=SecondTask;
-
   
 //Task 3 
 function ThirdTask(){
@@ -52,8 +54,7 @@ function ThirdTask(){
     }
   }
   
-  btn3.onclick=ThirdTask;
-  
+  btn3.onclick=ThirdTask;  
 
   //Task 4
   function FourTask(){
@@ -74,5 +75,21 @@ function ThirdTask(){
     
     btn4.onclick=FourTask;
   
-  
+    // Task5
+    function FiveTask(){
+        let n = prompt('Введіть число');  
+        let str5 = ' ';  
+        
+           if( n  % 3 === 0){
+           str5 += 'Дане число можна отримати шляхом зведення числа 3 у деякий ступінь';   
+           }
+           else {
+            str5 +=  'Дане число не можна отримати шляхом зведення числа 3 у деякий ступінь'; 
+          }
+           
+           res51.innerHTML = n;
+           res52.innerHTML= str5 ;
+          }   
+        
+        btn5.onclick=FiveTask;
   
